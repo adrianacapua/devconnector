@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://adiAdmin:adipassword@devconnector.nqbx6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://adiAdmin:adipassword@devconnector.nqbx6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
 }
