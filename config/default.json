@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://adiAdmin:adipassword@devconnector.nqbx6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-  "jwtSecret": "mysecrettoken"
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "3805db012e95cef0e96c",
+  "githubSecret": "0fba4afaad0d8c58bc2886a59789e3c6b1edf553"
 }
