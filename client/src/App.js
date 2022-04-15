@@ -4,9 +4,14 @@ import { NavBar } from './components/layouts/NavBar';
 import { Landing } from './components/layouts/Landing';
 import { Register } from './components/auth/Register';
 import { Login } from './components/auth/Login';
+// Redux
+import { Provider } from 'react-redux';
+import store from './store';
+
 import './App.css';
 
 const App = () => (
+  <Provider store={store}>
     <Router>
       <Fragment>
         <NavBar />
@@ -20,6 +25,7 @@ const App = () => (
         </Routes>
       </Fragment>
     </Router>
+  </Provider>
 );
 
 export default App;
