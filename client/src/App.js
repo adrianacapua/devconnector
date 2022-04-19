@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { NavBar } from './components/layouts/NavBar';
 import { Landing } from './components/layouts/Landing';
 import Register from './components/auth/Register';
-import { Login } from './components/auth/Login';
+import Login from './components/auth/Login';
 import Alert from './components/layouts/Alert';
 import setAuthToken from './utils/setAuthToken';
 import { loadUser } from './actions/auth';
@@ -29,12 +29,14 @@ const App = () => {
         <Fragment>
           <NavBar />
           <section className="container">
+            <Routes>
+              <Route exact path="/register" element={ <Register /> } />
+              <Route exact path="/login" element={ <Login /> } />
+            </Routes>
               <Alert />
           </section>
           <Routes>
             <Route exact path='/' element={ <Landing /> } />
-            <Route exact path="/register" element={ <Register /> } />
-            <Route exact path="/login" element={ <Login /> } />
           </Routes>
         </Fragment>
       </Router>
