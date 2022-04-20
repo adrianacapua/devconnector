@@ -7,9 +7,9 @@ const PrivateRoute = ({ auth: { isAuthenticated }, loading, children }) => {
 
   if (isAuthenticated && !loading) {
     return children;
+  } else {
+    return <Navigate to='/login' />
   }
-
-  return <Navigate to='/login' />
 };
 
 PrivateRoute.propTypes = {
