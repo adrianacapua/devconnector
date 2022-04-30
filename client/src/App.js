@@ -35,6 +35,7 @@ const App = () => {
             <Route exact path='/' element={ <Landing /> } />
           </Routes>
           <section className="container">
+            <Alert />
             <Routes>
               <Route exact path="/register" element={ <Register /> } />
               <Route exact path="/login" element={ <Login /> } />
@@ -49,7 +50,6 @@ const App = () => {
                 </PrivateRoute>
               } />
             </Routes>
-            <Alert />
           </section>
         </Fragment>
       </Router>
