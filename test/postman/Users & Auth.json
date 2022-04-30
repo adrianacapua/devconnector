@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "023b7f6b-4b6e-4f01-b7b1-38940263797a",
+		"name": "Users & Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*",
+						"type": "default"
+					},
+					{
+						"key": "Accept-API-Version",
+						"value": "resource=1.0, protocol=1.0",
+						"type": "default"
+					},
+					{
+						"key": "Accept-Encoding",
+						"value": "gzip, deflate",
+						"type": "default"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "X-OpenAM-Password",
+						"value": "A@thS3rv1c3",
+						"type": "default"
+					},
+					{
+						"key": "X-OpenAM-UserName",
+						"value": "authserviceaccount",
+						"type": "default"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"jdoe@gmail.com\",\n    \"password\": \"123213\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get auth user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI0YzYyMWFhOTI0ZWUyNjI5NWFkODdlIn0sImlhdCI6MTY0OTE3MzAxOSwiZXhwIjoxNjQ5NTMzMDE5fQ.uHOyiBTjzw7BAvzVUFwQYqsiqtw27L8hQzgdthzTBzc",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"adrianacapua@gmail.com\",\n    \"password\": \"123213\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

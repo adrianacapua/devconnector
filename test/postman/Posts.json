@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "6bce1ada-e4bf-4fe0-80c8-57146888f6ca",
+		"name": "Posts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI0YzYxYzFhOTI0ZWUyNjI5NWFkODc4In0sImlhdCI6MTY0OTY3NDM2OCwiZXhwIjoxNjUwMDM0MzY4fQ.skaPATG3gse8_GCZcB_hqZe0GmZ6rC81wIp9Tpe6xSQ",
+						"description": "Adi Token",
+						"type": "default"
+					},
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. \"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI0YzYxYzFhOTI0ZWUyNjI5NWFkODc4In0sImlhdCI6MTY0OTY3NDM2OCwiZXhwIjoxNjUwMDM0MzY4fQ.skaPATG3gse8_GCZcB_hqZe0GmZ6rC81wIp9Tpe6xSQ",
+						"description": "Adi Token",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get post by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI0YzYxYzFhOTI0ZWUyNjI5NWFkODc4In0sImlhdCI6MTY0OTY3NDM2OCwiZXhwIjoxNjUwMDM0MzY4fQ.skaPATG3gse8_GCZcB_hqZe0GmZ6rC81wIp9Tpe6xSQ",
+						"description": "Adi Token",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/posts/625416d5d1aaf511e308befb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts",
+						"625416d5d1aaf511e308befb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete one post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI0YzYxYzFhOTI0ZWUyNjI5NWFkODc4In0sImlhdCI6MTY0OTY3NDM2OCwiZXhwIjoxNjUwMDM0MzY4fQ.skaPATG3gse8_GCZcB_hqZe0GmZ6rC81wIp9Tpe6xSQ",
+						"description": "Adi Token",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/posts/625416d5d1aaf511e308befb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts",
+						"625416d5d1aaf511e308befb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like a post",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI0YzYxYzFhOTI0ZWUyNjI5NWFkODc4In0sImlhdCI6MTY0OTY3ODYyOCwiZXhwIjoxNjUwMDM4NjI4fQ.jnUH4zGK5G9tJZmyYYoBmksM4BOcouPRLVBdUrl_xlU",
+						"description": "Adi Token",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/posts/like/62540973fa47cea286b9dd64",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts",
+						"like",
+						"62540973fa47cea286b9dd64"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unlike a post",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI0YzYxYzFhOTI0ZWUyNjI5NWFkODc4In0sImlhdCI6MTY0OTY3ODYyOCwiZXhwIjoxNjUwMDM4NjI4fQ.jnUH4zGK5G9tJZmyYYoBmksM4BOcouPRLVBdUrl_xlU",
+						"description": "Adi Token",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/posts/unlike/62540973fa47cea286b9dd64",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts",
+						"unlike",
+						"62540973fa47cea286b9dd64"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI0YzYxYzFhOTI0ZWUyNjI5NWFkODc4In0sImlhdCI6MTY0OTY3ODYyOCwiZXhwIjoxNjUwMDM4NjI4fQ.jnUH4zGK5G9tJZmyYYoBmksM4BOcouPRLVBdUrl_xlU",
+						"description": "Adi Token",
+						"type": "default"
+					},
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"Delete me\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/posts/comment/62540973fa47cea286b9dd64",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts",
+						"comment",
+						"62540973fa47cea286b9dd64"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a comment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI0YzYxYzFhOTI0ZWUyNjI5NWFkODc4In0sImlhdCI6MTY0OTY3ODYyOCwiZXhwIjoxNjUwMDM4NjI4fQ.jnUH4zGK5G9tJZmyYYoBmksM4BOcouPRLVBdUrl_xlU",
+						"description": "Adi Token",
+						"type": "default"
+					},
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/posts/comment/62540973fa47cea286b9dd64/62541d13150eaeee08ebdd09",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"posts",
+						"comment",
+						"62540973fa47cea286b9dd64",
+						"62541d13150eaeee08ebdd09"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

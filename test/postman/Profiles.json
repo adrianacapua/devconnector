@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "1a462267-0250-4a1f-aa4e-73a96538a6d6",
+		"name": "Profiles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create and update profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI1MzhkYzMzMTUwZGY1NTEwZmU0NzYwIn0sImlhdCI6MTY0OTY0Mjk0NywiZXhwIjoxNjUwMDAyOTQ3fQ.PtzZHgz_M9EGJg5009yPkXr_s0OXb284eNBygv0BeK0",
+						"description": "Adi Token",
+						"type": "default"
+					},
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"company\": \"Test Company\",\n    \"status\": \"Developer\",\n    \"skills\": \"HTML, CSS, PHP, Python ,JS\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/profile/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"profile",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get logged in users profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI0YzYxYzFhOTI0ZWUyNjI5NWFkODc4In0sImlhdCI6MTY0OTQwNjk3MywiZXhwIjoxNjQ5NzY2OTczfQ.CfgzPPObVvJ_7sayuWT6uUJoBpsYcs-vopr0jCAVCi4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/profile/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"profile",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all profiles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/profile/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get profile by user id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/profile/user/624c61c1a924ee26295ad878",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"profile",
+						"user",
+						"624c61c1a924ee26295ad878"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete profile & user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI1MzhkYzMzMTUwZGY1NTEwZmU0NzYwIn0sImlhdCI6MTY0OTY0Mjk0NywiZXhwIjoxNjUwMDAyOTQ3fQ.PtzZHgz_M9EGJg5009yPkXr_s0OXb284eNBygv0BeK0",
+						"description": "Adi Token",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add an experience",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI0YzYxYzFhOTI0ZWUyNjI5NWFkODc4In0sImlhdCI6MTY0OTY0NDMwOSwiZXhwIjoxNjUwMDA0MzA5fQ.llz9qZMI2o57XHJuDxQ5VOxTtgTvHrYTOEM6AwxIeDU",
+						"description": "Adi Token",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Test\",\n    \"company\": \"Test\",\n    \"location\": \"Boston, MA\",\n    \"from\": \"1-5-2006\",\n    \"to\": \"1-7-2009\",\n    \"description\": \"FUll stack web dev\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/profile/experience",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"profile",
+						"experience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add education",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI0YzYxYzFhOTI0ZWUyNjI5NWFkODc4In0sImlhdCI6MTY0OTY0NDMwOSwiZXhwIjoxNjUwMDA0MzA5fQ.llz9qZMI2o57XHJuDxQ5VOxTtgTvHrYTOEM6AwxIeDU",
+						"description": "Adi Token",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"school\": \"Test School\",\n    \"degree\": \"Associates Degree\",\n    \"fieldofstudy\": \"Computer Science\",\n    \"from\": \"8-2-2003\",\n    \"to\": \"3-4-2005\",\n    \"description\": \"Got Associates in Computer Science\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/profile/education",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"profile",
+						"education"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete experience",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI0YzYxYzFhOTI0ZWUyNjI5NWFkODc4In0sImlhdCI6MTY0OTY0NDMwOSwiZXhwIjoxNjUwMDA0MzA5fQ.llz9qZMI2o57XHJuDxQ5VOxTtgTvHrYTOEM6AwxIeDU",
+						"description": "Adi Token",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/profile/experience/6253aa883474b178eed0e335",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"profile",
+						"experience",
+						"6253aa883474b178eed0e335"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete education",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjI0YzYxYzFhOTI0ZWUyNjI5NWFkODc4In0sImlhdCI6MTY0OTY0NDMwOSwiZXhwIjoxNjUwMDA0MzA5fQ.llz9qZMI2o57XHJuDxQ5VOxTtgTvHrYTOEM6AwxIeDU",
+						"description": "Adi Token",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/profile/education/6254004d5c96dbad8d17b01b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"profile",
+						"education",
+						"6254004d5c96dbad8d17b01b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Github repos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/profile/github/sdfsfsd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"profile",
+						"github",
+						"sdfsfsd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
